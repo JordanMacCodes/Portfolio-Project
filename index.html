@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Macomber's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 3rem auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .about-content, .education-content, .experience-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-content img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .about-content img:hover {
+            transform: scale(1.1);
+        }
+        .about-content p, .education-content p, .experience-content p {
+            max-width: 800px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .about-content span {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        #imageModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #imageModal img {
+            display: block;
+            margin: 10% auto;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        #imageModal span {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jordan Macomber's Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Job Experience</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img id="profileImage" src="image4.png" alt="Jordan Macomber">
+            <p>Hi there! I'm Jordan Macomber, a 26-year-old with a passion for blending creativity and technology. By day, I'm a successful barber in the charming town of Parker, Colorado, where I've honed my skills for the past four years. But by night, I'm a self-taught web development enthusiast, diving into the world of code and design.</p>
+            <p>I'm a proud homeowner, sharing my life with my wonderful spouse. While I've found great success and satisfaction in my barbering career, my heart has always been drawn to the dynamic and ever-evolving field of technology. Over the past few months, I've embarked on an exciting journey to master web development, combining my eye for detail with my love for tech.</p>
+            <p>Whether it's crafting a perfect fade or developing an interactive website, I bring my dedication, creativity, and passion to everything I do. Join me as I continue to learn, grow, and create in this thrilling new chapter of my life.</p>
+            <span>Let's build something amazing together!</span>
+        </div>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-content">
+            <p>My educational journey has been unique and rewarding. I earned my GED in February of 2018 from Arapahoe Community College. This achievement marked the beginning of my commitment to lifelong learning and personal growth.</p>
+            <p>After gaining valuable real-world experience in the workforce, I decided to pursue a specialized education. I enrolled at Emily Griffith Technical Institute in Denver to study barbering. My dedication and hard work paid off as I graduated with top honors, achieving straight A's throughout the program.</p>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Job Experience</h2>
+        <div class="experience-content">
+            <p>My professional background is diverse, spanning various industries. I started my career in the food industry, working as a server and bartender at Cranellis Italian. This experience honed my customer service skills and ability to work under pressure.</p>
+            <p>I then transitioned into sales, spending two years at Sprint where I developed strong sales techniques and communication skills. My brief stint at Carmax further enhanced my understanding of the sales process and customer relations.</p>
+            <p>In pursuit of my passion, I attended barber school and embarked on a new career path. Since early 2020, I have been working as a barber at Strictly Biz Barbershop. Here, I combine my skills and creativity to provide exceptional services to my clients.</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Coming soon...</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Jordan Macomber</p>
+    </footer>
+
+    <div id="imageModal">
+        <span id="closeModal">&times;</span>
+        <img id="modalImage" src="image4.png" alt="Jordan Macomber">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const profileImg = document.getElementById('profileImage');
+        const closeModal = document.getElementById('closeModal');
+
+        profileImg.onclick = function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+        }
+
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
